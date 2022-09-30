@@ -147,7 +147,6 @@ class Ball {
     noFill();
 strokeWeight(4);
 stroke(255,0,0);
-    rectMode(CORNERS);
     line(position.x,position.y,position.x+velocity.x*5,position.y+velocity.y*5);
   }
 }
