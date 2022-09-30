@@ -5,7 +5,8 @@
 
 int nbBall=1;
 float coefRestitution=0.9f;
-
+float masse=10.f;
+float dT=0.5f;
 final float h=4;//rayon de recherche
 MetricTree mt = new MetricTree();
 
@@ -38,4 +39,17 @@ void draw() {
    
  
   
+}
+void mousePressed(){
+    for (Ball b : balls) {
+      PVector dist=new PVector(mouseX-b.position.x,mouseY-b.position.y);
+      dist.x/=masse;
+      dist.y/=masse;
+      b.velocity.x+=dist.x;
+            b.velocity.y+=dist.y;
+
+      b.velocity.x*=dT;
+            b.velocity.y*=dT;
+
+  }
 }

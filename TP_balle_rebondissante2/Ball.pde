@@ -7,7 +7,7 @@ class Ball {
   Ball(float x, float y, float r_) {
     position = new PVector(x, y);
     velocity = PVector.random2D();
-    velocity.mult(3);
+    velocity.mult(10);
     radius = r_;
     m = radius*.1;
   }
@@ -34,7 +34,7 @@ class Ball {
       position.y = height-radius;
       velocity.y *= -1;
        velocity.x*=coefRestitution;
-            velocity.y*=coefRestitution;
+       velocity.y*=coefRestitution;
       velocity.z*=coefRestitution;
     } else if (position.y < radius) {
       position.y = radius;
