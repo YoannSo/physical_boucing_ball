@@ -9,6 +9,7 @@ float gravity=9.81;
 float dT=0.15f;
 PVector a=new PVector(0,9.81);
 final float h=4;//rayon de recherche
+float d=0.4; // Variable de frottement de l'air (est choisis arbitrairement dans le livre)
 
 
 int ID_baseBall=0;
@@ -76,6 +77,7 @@ void draw() {
     text("Coef de restitution: "+params[currentId*3+2],30,90);
     text("Masse: "+params[currentId*3],30,120);
     text("Frottement: "+params[currentId*3+1],30,150);
+    text("Frottement air: "+d,30,180);
 
     
     a.y+=gravity;

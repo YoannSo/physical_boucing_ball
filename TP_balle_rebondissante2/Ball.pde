@@ -14,8 +14,8 @@ class Ball {
   }
 
   void update() {
-    position.x+=velocity.x*dT;
-    position.y+=velocity.y*dT;
+    position.x+=velocity.x*dT +velocity.x*d/m;
+    position.y+=velocity.y*dT +velocity.y*d/m;
 
   }
 
